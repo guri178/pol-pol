@@ -1,0 +1,127 @@
+.closeMenu {
+    position: absolute;
+    transform: translateY(-250px);
+    z-index: 2;
+    width: 100%;
+    transition: 0.5s ease-in;
+    // サイドメニュー
+    .sideMenu {
+        background-color: black;
+        opacity: 0.8;
+        li {
+            height: 50px;
+            color: #FFF;
+            border-bottom: 1px solid #FFF;
+            padding-left: 5%;
+        }
+    }
+    // サイドメニュータイトル
+    div {
+        height: 50px;
+        width: 100%;
+        background-color: #FFF;
+        position: relative;
+         // メニュータイトル
+        p {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+            color: gray;
+        }  
+        // ハンバーガーアイコン
+        .hamburgerButton {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-30%, -50%);
+            width: 50px;
+            height: 50px;
+            span {
+                display: inline-block;
+                transition: all .4s;
+                position: absolute;
+                left: 14px;
+                height: 2px;
+                border-radius: 2px;
+                background: gray;
+                width: 45%;
+            }
+            .line1 {
+                top:15px; 
+            }
+            .line2 {
+                top:23px;
+            }
+            .line3 {
+                top:31px;
+            }
+        }
+    }
+}
+
+// ボタンを押した後
+.openMenu {
+    position: absolute;
+    transform: translateY(0);
+    transition: 0.5s ease-in;
+    z-index: 2;
+    width: 100%;
+    // サイドメニュー
+    .sideMenu {
+        background-color: black;
+        opacity: 0.8;
+        li {
+            height: 50px;
+            line-height:50px;
+            color: #FFF;
+            border-bottom: 1px solid #FFF;
+            padding-left: 5%;
+        }
+    }
+    // サイドメニュータイトル
+    div {
+        height: 50px;
+        width: 100%;
+        background-color: #FFF;
+        position: relative;
+         // メニュータイトル
+        p {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+            color: gray;
+        }  
+        // ハンバーガーアイコン
+        .hamburgerButton {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-30%, -50%);
+            width: 50px;
+            height: 50px;
+            span {
+                display: inline-block;
+                transition: all .4s;
+                position: absolute;
+                left: 14px;
+                height: 2px;
+                border-radius: 2px;
+                background: gray;
+                width: 45%;
+            }
+            .line1 {
+                top:15px; 
+            }
+            .line2 {
+                top:23px;
+            }
+            .line3 {
+                top:31px;
+            }
+        }
+    }
+}

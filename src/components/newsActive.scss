@@ -1,0 +1,152 @@
+.news {
+    background-color: #EEEEEE;
+    position: relative;
+    // タイトル
+    h3 {
+        position: absolute;
+        top: 60px;
+        left: 250px;
+        font-size: 2rem;
+    }
+    .underline {
+        position: absolute;
+        top: 100px;
+        left: 250px;
+        width: 50px;
+        height: 5px;
+        object-fit: cover;
+    }
+    // ボタン
+    button {
+        background-color: #FFF;
+        position: absolute;
+        top: 60px;
+        right: 250px;
+        color: black;
+        border: solid 1px black;
+        width: 170px;
+        padding: 15px 0;
+        transition: 0.7s;
+        span {
+            position: absolute;
+            top: 17px;
+            right: 20px;
+            color: black;
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid currentColor;
+            border-left: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+            transition: 0.7s;
+        }
+    }
+    button:hover {
+        background-color: black;
+        color: #FFF;
+        border: solid 1px #FFF;
+        span {
+            color: #FFF;
+        }
+    }
+    // NEWSリストボックス
+    ul {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 200px;
+        // NEWSリスト
+        li {
+            margin-bottom: 100px;
+            display: flex;
+            // NEWS画像
+            img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+                margin-right: 20px;
+                transition: 0.7s;
+            }
+            img:hover {
+                opacity: 0.5;
+            } 
+            // NEWSテキスト
+            .nBox {
+                width: 450px;
+                text-align: left;
+                .nTitle {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                }
+                .date {
+                    font-size: 1rem;
+                    color: gray;
+                    margin-bottom: 10px;
+                }
+                .nText {
+                    font-size: 1rem;
+                    color: gray;
+                }
+            }
+        }
+    }
+    // MOREクリック前の状態
+    .newsListClose {
+        height: 50%;
+        li:nth-child(n+4) {
+            display: none;
+        }
+    }
+}
+
+// レスポンシブ
+@media screen and (max-width: 800px) {
+    .news {
+        h3 {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .underline {
+            display: none;
+        }
+        // ボタン
+        button {
+            display: none;
+        }
+        // NEWSリストボックス
+        ul {
+            display: block;
+            padding-top: 150px;
+            padding-bottom: 30px;
+            // NEWSリスト
+            li {
+                display: block;
+                // NEWS画像
+                img {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 20px;
+                }
+                // NEWSテキスト
+                .nBox {
+                    width: 300px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-align: start;
+                    padding: 0;
+                }
+            }
+        }
+        // MOREクリック前の状態
+        .newsListClose {
+            li:nth-child(n+4) {
+                display: block;
+            }
+        }
+    }
+}

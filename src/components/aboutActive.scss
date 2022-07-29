@@ -1,0 +1,24 @@
+.about {
+    margin: 0;
+    padding: 60px 0;
+    background-color: #EEEEEE;
+    // テキスト
+    .contentBox {
+        width: 400px;
+        margin: 0 auto;
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: left;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+    }
+}
+// レスポンシブ
+@media screen and (max-width: 800px) {
+    
+}

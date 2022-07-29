@@ -1,0 +1,162 @@
+.SnsLink {
+    background-color: #FFF;
+    position: relative;
+    // 丸ボタン
+    .circleButton {
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translate(-50%, 0);   
+        background-color:#FFF;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        border-radius: 50%;
+        transition: 0.7s;
+        .underArrow {
+            position: absolute;
+            top: 25%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            width: 12px;
+            height: 12px;
+            border: 1.5px solid gray;
+            border-left: 0;
+            border-bottom: 0;
+            box-sizing: border-box;
+            transform: translateY(25%) rotate(-45deg);
+        }
+    }
+    .circleButton:hover {
+        transform: translate(-50%, -10%); 
+    }
+    // SNSリンク
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 300px;
+        padding: 30px 0;
+        li {
+            text-align: center;
+            width: 170px;
+            font-size: 0.9rem;
+            padding: 15px 0;
+        }
+        .FacebookColor {
+            color: #003399;
+            border: 1px solid #003399;
+            transition: 0.5s;
+        }
+        .FacebookColor:hover {
+            color: #FFF;
+            background-color: #003399;
+        }
+        .TwitterColor {
+            color: #33CCCC;
+            border: 1px solid #33CCCC;
+            transition: 0.5s;
+        }
+        .TwitterColor:hover {
+            color: #FFF;
+            background-color: #33CCCC;
+        }
+        .BookmarkColor {
+            color: #006699;
+            border: 1px solid #006699;
+            transition: 0.5s;
+        }
+        .BookmarkColor:hover {
+            color: #FFF;
+            background-color: #006699;
+        }
+    }
+}
+// アンダーメニュー
+.UnderMenu {
+    background-color: #999999;
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 350px;
+        padding: 30px 0;
+        li {
+            color: #FFF;
+            font-size: 0.8rem;
+            transition: 0.5s;
+        }
+        li:hover {
+            color: #EEEEEE;
+        }
+    }
+}
+// コピーライト
+.Copyright {
+    background-color: #555555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    img {
+        margin-right: 250px;
+        width: 100px;
+        height: 100px;  
+    }
+    p {
+        color: #FFF;
+        font-size: 0.5rem;
+    }
+}
+
+// レスポンシブ
+@media screen and (max-width: 800px) {
+    .SnsLink {
+        // SNSリンク
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+            li {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    // アンダーメニュー
+    .UnderMenu {
+        background-color: #999999;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            li {
+                padding: 20px 0;
+                text-align: center;
+                width: 100%;
+                border-top: 1px solid #FFF;
+                color: #FFF;
+                font-size: 1rem;
+                transition: 0.5s;
+            }
+            li:hover {
+                color: #EEEEEE;
+            }
+        }
+    }
+    // コピーライト
+    .Copyright {
+        display: flex;
+        justify-content: space-around;
+        img {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+#PRODUCT {
+    // ボックス
+    position: relative;
+    background-color: #FFF;
+    // タイトル
+    h3 {
+        position: absolute;
+        top: 60px;
+        left: 250px;
+        font-size: 2rem;
+    }
+    .underline {
+        position: absolute;
+        top: 100px;
+        left: 250px;
+        width: 50px;
+        height: 5px;
+        object-fit: cover;
+    }
+    // ボタン
+    button {
+        background-color: #FFF;
+        position: absolute;
+        top: 60px;
+        right: 250px;
+        color: black;
+        border: solid 1px black;
+        width: 170px;
+        padding: 15px 0;
+        transition: 0.7s;
+        span {
+            position: absolute;
+            top: 17px;
+            right: 20px;
+            color: black;
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid currentColor;
+            border-left: 0;
+            border-bottom: 0;
+            transform: rotate(45deg);
+            transition: 0.7s;
+        }
+    }
+    button:hover {
+        background-color: black;
+        color: #FFF;
+        border: solid 1px #FFF;
+        span {
+            color: #FFF;
+        }
+    }
+    // PRODUCTリストボックス
+    ul {
+        padding-top: 200px;
+        margin: 0 200px;
+        display: flex;
+        justify-content: space-around;
+        align-content:space-around;
+        flex-wrap: wrap;
+        // PRODUCTリスト
+        li {
+            margin-bottom: 60px;
+            padding: 0 30px;
+            transition: 0.7s;
+            // PRODUCT画像
+            img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover;
+                border-right: 3px solid #FFF;
+                border-bottom: 3px solid #FFF;
+                border-radius: 0 20px 20px 10px;
+                box-shadow: 10px 0 20px #BBB;
+            }
+            // PRODUCTテキスト
+            p {
+                font-size: 1.5rem;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+        li:hover {
+            opacity: 0.5;
+        }
+    }
+    // MOREクリック前の状態
+    .productListClose {
+        height: 50%;
+        li:nth-child(n+4) {
+            display: none;
+        }
+    }
+}
+
+// レスポンシブ
+@media screen and (max-width: 959px) {
+    #PRODUCT {
+        // タイトル
+        h3 {
+            position: absolute;
+            top: 3%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .underline {
+            display: none;
+        }
+        // ボタン
+        button {
+            display: none;
+        }
+        // PRODUCTリストボックス
+        ul {
+            padding-top: 150px;
+        }
+        // MOREクリック前の状態
+        .productListClose {
+            li:nth-child(n+4) {
+                display: block;
+            }
+        }
+    }
+}

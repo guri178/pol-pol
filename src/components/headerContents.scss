@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#responsiveSideMenu {
+    display: none;
+} 
+
+.header {
+    background-color: #EEEEEE;
+    height: 520px;
+    position: relative;
+
+    .mainRogo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+    }
+    
+    .underArr {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        color: #FFF;
+        line-height: 1;
+        width: 15px;
+        height: 15px;
+        border: 3px solid currentColor;
+        border-left: 0;
+        border-bottom: 0;
+        box-sizing: border-box;
+        transform: translateY(-25%) rotate(135deg);
+    }
+    
+    .bgImg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        border-radius: 99% / 0 0 20% 20%;
+        animation: bgAnime 21s infinite;
+    }
+    .src1 {
+        background-image: url(./img/haikei1.jpg);
+    }
+    .src2 {
+        background-image: url(./img/haikei2.jpg);
+        animation-delay: 7s;
+    }
+    .src3 {
+        background-image: url(./img/haikei3.jpg);
+        animation-delay: 14s;
+    }
+    @keyframes bgAnime {
+        0% {opacity: 0;}
+        10% {opacity: 1;}
+        23% {opacity: 1;}
+        33% {opacity: 0;}
+        100% {opacity: 0;}
+    }
+
+    .sideMenu {
+        position: absolute;
+        width: 50%;
+        top: 50px;
+        right: 30px;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            color: #FFF;
+        }
+        li :hover {
+            cursor: pointer;
+            border-bottom: #EEEEEE 1.5px solid;
+        }
+    }
+} 
+// レスポンシブ
+@media screen and (max-width: 800px) {
+    #responsiveSideMenu {
+        display: block;
+        position: relative;
+    }
+    .header {
+        .mainRogo {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .sideMenu {
+            display: none;
+        }
+    }
+}
